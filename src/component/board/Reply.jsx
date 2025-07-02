@@ -17,7 +17,7 @@ function Reply() {
   const [file, setFile] = useState([]); //파일
 
   const getView = async () => {
-    const res = await axiosInstance.get("/api/reply/view?no=" + no);
+    const res = await axiosInstance.get(`/api/replies/${no}`);
     setParam({ ...param, ...res.data });
   };
   useEffect(() => {
